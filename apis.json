@@ -1,0 +1,46 @@
+{
+    "name": "Luno",
+    "description": "The easiest way to buy Bitcoin and Ethereum",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/26408-www-luno-com.jpg",
+    "tags": [
+        "api provider",
+        "blockchain",
+        "have api",
+        "marketplaces"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/luno\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Luno",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/26408-www-luno-com.jpg",
+            "humanURL": "https:\/\/www.luno.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/luno-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/lunomoney"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/lunomoney"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.luno.com"
+        }
+    ]
+}
