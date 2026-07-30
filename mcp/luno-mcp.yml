@@ -1,0 +1,64 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://github.com/luno/luno-mcp
+server:
+  name: luno-mcp
+  description: Official MCP server for the Luno Cryptocurrency API.
+  repo: https://github.com/luno/luno-mcp
+  language: go
+  transport: [stdio, sse, streamable-http]
+  default_transport: stdio
+  image: ghcr.io/luno/luno-mcp:latest
+install:
+  docker: docker run --rm -i -e LUNO_API_KEY_ID=... -e LUNO_API_SECRET=... ghcr.io/luno/luno-mcp:latest
+  homebrew: brew tap luno/luno-mcp && brew install luno-mcp
+  go: go install github.com/luno/luno-mcp/cmd/server@latest
+auth:
+  env:
+    - LUNO_API_KEY_ID
+    - LUNO_API_SECRET
+  optional_env:
+    - LUNO_API_DEBUG
+    - LUNO_API_DOMAIN
+    - ALLOW_WRITE_OPERATIONS   # write operations disabled by default
+tools:
+  - name: get_ticker
+    category: market-data
+    requires_auth: false
+  - name: get_tickers
+    category: market-data
+    requires_auth: false
+  - name: get_order_book
+    category: market-data
+    requires_auth: false
+  - name: list_trades
+    category: market-data
+    requires_auth: false
+  - name: get_candles
+    category: market-data
+    requires_auth: false
+  - name: get_markets_info
+    category: market-data
+    requires_auth: false
+  - name: get_balances
+    category: account
+    requires_auth: true
+  - name: list_orders
+    category: account
+    requires_auth: true
+  - name: list_transactions
+    category: account
+    requires_auth: true
+  - name: get_transaction
+    category: account
+    requires_auth: true
+  - name: create_order
+    category: trading
+    requires_auth: true
+  - name: cancel_order
+    category: trading
+    requires_auth: true
+  - name: convert
+    category: trading
+    requires_auth: true

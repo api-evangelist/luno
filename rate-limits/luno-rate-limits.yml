@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: live response-header observation on api.luno.com
+signaled: true
+scheme: ietf-ratelimit-headers
+headers:
+  - x-ratelimit-limit
+  - x-ratelimit-remaining
+  - x-ratelimit-reset
+observed:
+  x-ratelimit-limit: "5000, 5000;w=1"
+  window_seconds: 1
+scope: per-api-key
+on_exceed:
+  http_status: 429
+limits:
+  - name: default
+    limit_count: 5000
+    window: per-window (w=1)
+    note: >-
+      Value observed live on the public tickers endpoint. Luno applies rate
+      limits per API key; documented per-endpoint limits may differ for private
+      trading endpoints.

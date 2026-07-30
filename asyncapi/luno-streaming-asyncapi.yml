@@ -1,0 +1,54 @@
+generated: '2026-07-20'
+method: generated
+source: https://www.luno.com/developers/api (Streaming API) + github.com/luno/luno-go/streaming
+spec_type: AsyncAPI
+asyncapi: 2.6.0
+info:
+  title: Luno Streaming API
+  version: '1'
+  description: >-
+    Real-time market data stream for the Luno Exchange. A client opens one
+    WebSocket connection per trading pair, authenticates with its API key pair,
+    receives an initial full order book snapshot, then a continuous sequence of
+    update messages (create / delete / trade) that mutate the local order book.
+    This AsyncAPI is an API Evangelist representation of the documented stream,
+    not a Luno-published spec.
+servers:
+  production:
+    url: ws.luno.com
+    protocol: wss
+    description: Luno market data streaming endpoint.
+channels:
+  /api/1/stream/{pair}:
+    parameters:
+      pair:
+        description: Trading pair / market id, e.g. XBTZAR, ETHZAR.
+        schema:
+          type: string
+    subscribe:
+      operationId: streamMarketUpdates
+      message:
+        oneOf:
+          - name: orderBookSnapshot
+            summary: Initial full order book (sent once on connect).
+            payload:
+              type: object
+              properties:
+                sequence: { type: string }
+                asks: { type: array }
+                bids: { type: array }
+          - name: update
+            summary: Incremental order book / trade update.
+            payload:
+              type: object
+              properties:
+                sequence: { type: string }
+                trade_updates: { type: array }
+                create_update: { type: object }
+                delete_update: { type: object }
+                status_update: { type: object }
+                timestamp: { type: integer }
+notes: >-
+  Authentication is the same API Key ID / Secret pair used for the REST API,
+  sent in the initial subscription frame. Luno does not offer outbound webhooks;
+  this WebSocket stream is its event/streaming surface.

@@ -1,0 +1,49 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.luno.com/developers/api + live response-header probes
+authentication:
+  style: http-basic
+  detail: API Key ID as username, API Key Secret as password (per-key permissions)
+  ref: authentication/luno-authentication.yml
+versioning:
+  scheme: uri-path
+  detail: >-
+    Version is embedded in the path. Legacy/primary API under /api/1/, the newer
+    Exchange API under /api/exchange/{1,2,3}/. No header/date-based versioning.
+  examples: [/api/1/tickers, /api/exchange/1/markets, /api/exchange/2/listorders]
+pagination:
+  style: cursor-and-parameter
+  detail: >-
+    List endpoints accept limit and, where ordered, since / before / after style
+    parameters (e.g. listtrades supports since, sort_desc; listorders supports
+    limit, created_before). Not every list endpoint paginates.
+rate_limiting:
+  signaled: true
+  headers:
+    - x-ratelimit-limit      # observed value: "5000, 5000;w=1"
+    - x-ratelimit-remaining
+    - x-ratelimit-reset
+  detail: >-
+    Standard IETF-style RateLimit headers are returned on every response. Limits
+    are applied per API key. Exceeding the limit returns HTTP 429.
+  ref: rate-limits/
+tracing:
+  request_id_header: x-luno-trace-id
+  detail: Every response carries an x-luno-trace-id for support correlation.
+error_envelope:
+  format: custom-json
+  shape: '{"error": "<human message>", "error_code": "<ErrCode>"}'
+  problem_json: false
+  example: '{"error":"Market not available","error_code":"ErrMarketUnavailable"}'
+  ref: errors/luno-error-codes.yml
+idempotency:
+  supported: false
+  detail: >-
+    Luno does not document an idempotency-key header. Order placement is not
+    idempotent; clients must handle retries carefully. (No Idempotency pointer
+    emitted.)
+streaming:
+  supported: true
+  transport: websocket
+  url: wss://ws.luno.com/api/1/stream/{pair}
+  ref: asyncapi/luno-streaming-asyncapi.yml

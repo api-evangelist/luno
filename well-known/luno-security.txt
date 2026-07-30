@@ -1,0 +1,14 @@
+# Report a Security Vulnerability
+Responsible Disclosure Program: https://bugcrowd.com/engagements/luno-og
+Taxonomy: https://bugcrowd.com/vulnerability-rating-taxonomy
+
+# Contact the Security Team
+Contact: mailto:security@luno.com
+
+# Jobs
+Hiring: https://careers.luno.com/
+
+#Informational
+Canonical: https://www.luno.com/.well-known/security.txt
+
+Last Updated: 2025-07-08

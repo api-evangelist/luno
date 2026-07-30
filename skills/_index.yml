@@ -1,0 +1,14 @@
+generated: '2026-07-20'
+method: generated
+source: >-
+  Grounded in the official Luno MCP tool set (github.com/luno/luno-mcp) and the
+  Luno REST operations exposed by the first-party Go SDK (github.com/luno/luno-go).
+skills:
+  - file: luno-check-market-and-trade.md
+    name: Check the market and place a trade on Luno
+    api: https://www.luno.com/developers/api
+    operations: [get_ticker, get_order_book, create_order, list_orders, cancel_order]
+  - file: luno-check-balances-and-transactions.md
+    name: Review Luno balances and account transactions
+    api: https://www.luno.com/developers/api
+    operations: [get_balances, list_transactions, get_transaction]

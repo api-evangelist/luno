@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of Luno hosts
+hosts:
+  - host: https://www.luno.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: luno-security.txt
+  - host: https://api.luno.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404

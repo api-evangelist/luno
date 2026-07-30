@@ -1,0 +1,49 @@
+# Luno
+
+> Luno is a cryptocurrency exchange operating across Africa, Europe and Asia,
+> offering wallets, buying/selling and trading of Bitcoin, Ethereum and other
+> assets. The Luno API is a REST API (plus a WebSocket market-data stream) for
+> market data, account management, trading, transfers and withdrawals.
+
+## API
+
+- [Luno API reference](https://www.luno.com/developers/api): Full REST API documentation
+- [Developer portal](https://www.luno.com/api): API overview and key management
+- Base URL: https://api.luno.com — legacy API under /api/1/, Exchange API under /api/exchange/{1,2,3}/
+- Auth: HTTP Basic with an API Key ID (username) and API Key Secret (password); public market-data endpoints need no auth
+- Streaming: wss://ws.luno.com/api/1/stream/{pair} (real-time order book + trades)
+
+## SDKs
+
+- [Go SDK](https://github.com/luno/luno-go): go get github.com/luno/luno-go
+- [Python SDK](https://pypi.org/project/luno-python/): pip install luno-python
+- [PHP SDK](https://packagist.org/packages/luno/luno-php): composer require luno/luno-php
+- [Java SDK](https://github.com/luno/luno-java)
+
+## Agents / MCP
+
+- [Luno MCP server](https://github.com/luno/luno-mcp): Official MCP server (ghcr.io/luno/luno-mcp) exposing market-data, account and trading tools
+
+## Operations (selected, REST)
+
+- GET /api/1/tickers, GET /api/1/ticker — price tickers
+- GET /api/1/orderbook, GET /api/1/orderbook_top — order book
+- GET /api/1/trades — recent trades
+- GET /api/exchange/1/markets, GET /api/exchange/1/candles — markets & candles
+- GET /api/1/balance — wallet balances
+- GET /api/1/accounts/{id}/transactions, /pending — account ledger
+- POST /api/1/postorder, /api/1/marketorder, /api/1/stoporder — trading
+- GET /api/1/listorders, GET /api/1/orders/{id}, GET /api/1/listtrades — orders
+- POST /api/1/send, POST /api/1/withdrawals — transfers & withdrawals
+
+## Security & Trust
+
+- [security.txt](https://www.luno.com/.well-known/security.txt): Bugcrowd responsible disclosure, security@luno.com
+- [Trust center](https://trust.luno.com/): SOC 2, ISO 27001
+- [Status page](https://status.luno.com)
+
+## Legal
+
+- [Terms of use](https://www.luno.com/legal/terms-of-use)
+- [Privacy policy](https://www.luno.com/legal/privacy)
+- [Compliance](https://www.luno.com/legal/compliance)

@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.luno.com/developers/api + status.luno.com
+versioning:
+  scheme: uri-path
+  current: {legacy: v1, exchange: v3}
+  detail: >-
+    Multiple concurrent API versions are served side by side under /api/1/ and
+    /api/exchange/{1,2,3}/. Newer functionality lands on higher Exchange API
+    versions while /api/1/ remains supported.
+  docs: https://www.luno.com/developers/api
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: No formal published deprecation policy or RFC 8594 Sunset-header support found.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.luno.com
+deprecated_operations: []

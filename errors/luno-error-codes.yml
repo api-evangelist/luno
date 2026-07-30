@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.luno.com/developers/api + live API probes
+format: custom-json
+envelope:
+  fields: [error, error_code]
+  example: '{"error":"Market not available","error_code":"ErrMarketUnavailable"}'
+  problem_json: false
+http_status:
+  - status: 400
+    meaning: Malformed request / invalid parameters
+  - status: 401
+    meaning: Missing or invalid API key credentials (observed on private endpoints)
+  - status: 403
+    meaning: API key lacks the required permission for the operation
+  - status: 429
+    meaning: Rate limit exceeded (see x-ratelimit-* headers)
+  - status: 404
+    meaning: Resource not found
+  - status: 500
+    meaning: Server error
+error_codes:
+  - code: ErrMarketUnavailable
+    message: Market not available
+    cause: The requested trading pair/market does not exist or is not active.
+    observed: live
+notes: >-
+  Luno returns a stable machine-readable error_code (Err-prefixed) alongside a
+  human-readable error string. Only ErrMarketUnavailable was directly observed
+  live; the full registry is documented per-endpoint in the API reference.

@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/luno + npm/PyPI/Packagist/pkg.go.dev registries
+packages:
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/luno/luno-go
+    url: https://pkg.go.dev/github.com/luno/luno-go
+    repo: https://github.com/luno/luno-go
+    install: go get github.com/luno/luno-go
+    version: v0.2.0
+    official: true
+  - language: python
+    registry: pypi
+    name: luno-python
+    url: https://pypi.org/project/luno-python/
+    repo: https://github.com/luno/luno-python
+    install: pip install luno-python
+    version: 0.3.0
+    official: true
+  - language: php
+    registry: packagist
+    name: luno/luno-php
+    url: https://packagist.org/packages/luno/luno-php
+    repo: https://github.com/luno/luno-php
+    install: composer require luno/luno-php
+    official: true
+  - language: java
+    registry: github
+    name: luno-java
+    url: https://github.com/luno/luno-java
+    repo: https://github.com/luno/luno-java
+    official: true
+notes: >-
+  Luno's Go, Python and PHP SDKs are code-generated from a single source
+  (github.com/luno/sdkgen). A third-party Node.js wrapper (luno-api on npm, by
+  Tiaan du Plessis) exists but is NOT first-party and is excluded.
