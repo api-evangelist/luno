@@ -1,7 +1,14 @@
 aid: luno
-name: luno
-description: luno is a company surfaced as a portfolio company of balderton-capital and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: Luno
+description: >-
+  Luno is a cryptocurrency exchange founded in 2013 and operating across South
+  Africa, Nigeria, Europe, Malaysia, Indonesia and other markets, providing
+  wallets and the ability to buy, sell, store and trade Bitcoin, Ethereum and
+  other digital assets. The Luno API is a REST API (with an accompanying
+  WebSocket market-data stream) covering market data, account balances, order
+  placement and trading, transfers, sends and withdrawals. It authenticates with
+  an API key pair over HTTP Basic and is used by Luno's official Go, Python, PHP
+  and Java SDKs and by the official Luno MCP server.
 url: https://raw.githubusercontent.com/api-evangelist/luno/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +16,58 @@ x-backed-by:
 - balderton-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://github.com/luno.png
 tags:
 - Company
-apis: []
+- Cryptocurrency
+- Exchange
+- Bitcoin
+- Ethereum
+- Trading
+- Fintech
+- Wallet
+- Blockchain
+- Financial Services
+apis:
+- name: Luno API
+  description: >-
+    REST API for Luno market data, accounts, trading, transfers and withdrawals,
+    plus a WebSocket market-data stream. Legacy API under /api/1/ and the newer
+    Exchange API under /api/exchange/{1,2,3}/.
+  humanURL: https://www.luno.com/developers/api
+  baseURL: https://api.luno.com
+  properties:
+  - type: Documentation
+    url: https://www.luno.com/developers/api
+  - type: APIReference
+    url: https://www.luno.com/developers/api
+  - type: Authentication
+    url: authentication/luno-authentication.yml
+  - type: Conventions
+    url: conventions/luno-conventions.yml
+  - type: ErrorCatalog
+    url: errors/luno-error-codes.yml
+  - type: RateLimits
+    url: rate-limits/luno-rate-limits.yml
+  - type: AsyncAPI
+    url: asyncapi/luno-streaming-asyncapi.yml
+  - type: Webhooks
+    url: asyncapi/luno-streaming-asyncapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +76,64 @@ maintainers:
 common:
 - type: Website
   url: https://www.luno.com/
+- type: DeveloperPortal
+  url: https://www.luno.com/api
+- type: Documentation
+  url: https://www.luno.com/developers/api
+- type: APIReference
+  url: https://www.luno.com/developers/api
+- type: GettingStarted
+  url: https://www.luno.com/developers/api
+- type: Blog
+  url: https://www.luno.com/blog
+- type: GitHubOrganization
+  url: https://github.com/luno
+- type: SignUp
+  url: https://www.luno.com/signup
+- type: TermsOfService
+  url: https://www.luno.com/legal/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.luno.com/legal/privacy
+- type: Compliance
+  url: https://www.luno.com/legal/compliance
+- type: StatusPage
+  url: https://status.luno.com
+- type: TrustCenter
+  url: security/luno-trust-center.yml
+- type: Security
+  url: https://www.luno.com/.well-known/security.txt
+- type: Packages
+  url: packages/luno-packages.yml
+- type: SDKs
+  url: packages/luno-packages.yml
+- type: MCPServer
+  url: mcp/luno-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/luno-llms.txt
+- type: WellKnown
+  url: well-known/luno-well-known.yml
+- type: SecurityTxt
+  url: well-known/luno-security.txt
+- type: Authentication
+  url: authentication/luno-authentication.yml
+- type: Conventions
+  url: conventions/luno-conventions.yml
+- type: ErrorCatalog
+  url: errors/luno-error-codes.yml
+- type: RateLimits
+  url: rate-limits/luno-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/luno-lifecycle.yml
+- type: Conformance
+  url: conformance/luno-conformance.yml
+- type: DomainSecurity
+  url: security/luno-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/luno-vulnerability-disclosure.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v1
