@@ -55,7 +55,8 @@ tags:
 - Fintech
 - Wallets
 - Blockchain
-- Financial-Services
+- Financial Services
+- Real-Time
 tags_raw:
 - Company
 - Cryptocurrency
@@ -67,6 +68,8 @@ tags_raw:
 - Wallet
 - Blockchain
 - Financial Services
+- Financial-Services
+- Real-Time
 apis:
 - name: Luno API
   description: >-
