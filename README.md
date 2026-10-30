@@ -1,4 +1,4 @@
-# luno
+# Luno
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-luno is a company surfaced as a portfolio company of balderton-capital and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Luno is a cryptocurrency exchange founded in 2013 and operating across South Africa, Nigeria, Europe, Malaysia, Indonesia and other markets, providing wallets and the ability to buy, sell, store and trade Bitcoin, Ethereum and other digital assets. The Luno API is a REST API (with an accompanying WebSocket market-data stream) covering market data, account balances, order placement and trading, transfers, sends and withdrawals. It authenticates with an API key pair over HTTP Basic and is used by Luno's official Go, Python, PHP and Java SDKs and by the official Luno MCP server.
 
-Backed by: balderton-capital — https://www.luno.com/
+**Areas:** Company · Cryptocurrency · Exchange · Bitcoin · Ethereum · Trading · Fintech · Wallets · Blockchain · Financial Services · Real-Time
+
+## Luno on APIs.io
+
+Everything profiled for Luno is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/luno/](https://apis.io/providers/luno/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Luno API](https://apis.io/apis/luno/luno-api/) — REST API for Luno market data, accounts, trading, transfers and withdrawals, plus a WebSocket market-data stream. Legacy API under /api/1/ and the newer…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Luno Streaming API](https://apis.io/asyncapis/luno/luno-streaming-asyncapi/)
+
+#### Event channels (1)
+
+Individual events and webhooks the provider emits.
+
+- [/api/1/stream/{pair}](https://apis.io/channels/luno/api-1-stream-pair/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [luno-mcp](https://apis.io/servers/luno/luno-mcp/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Luno Authentication](https://apis.io/security/luno/luno-authentication/)
+- [Luno Domain Security](https://apis.io/security/luno/luno-domain-security/)
+- [Luno Trust Center](https://apis.io/security/luno/luno-trust-center/)
+- [Luno Vulnerability Disclosure](https://apis.io/security/luno/luno-vulnerability-disclosure/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Luno Rate Limits](https://apis.io/rate-limits/luno/luno-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.luno.com/)
+- [Documentation](https://www.luno.com/developers/api)
+- [Getting started](https://www.luno.com/developers/api)
+- [API reference](https://www.luno.com/developers/api)
+- [Sign up](https://www.luno.com/signup)
+- [Blog](https://www.luno.com/blog)
+- [Security](https://www.luno.com/.well-known/security.txt)
+- [Compliance](https://www.luno.com/legal/compliance)
+- [Terms of service](https://www.luno.com/legal/terms-of-use)
+- [Privacy policy](https://www.luno.com/legal/privacy)
+- [GitHub](https://github.com/luno)
+- [Status](https://status.luno.com)
+
+## API Evangelist rating
+
+**Kin Score 49.9** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.7 |
+| Contract quality | 35.4 |
+| Contract governance | 18.2 |
+| Operational transparency | 57.9 |
+| Developer ergonomics | 61.3 |
+| Access clarity | 50.0 |
+
+**Agent readiness 26.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 32.1** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/luno/](https://apis.io/providers/luno/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Luno: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/luno/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
